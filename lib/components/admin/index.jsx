@@ -35,16 +35,24 @@ export default class Admin extends Component {
 
   render () {
     return (
-      <div id='admin-holder' className={cx('blurr', this.props.blurred && 'blurred', !this.props.editing && 'previewing', this.props.linkingData && 'pb-linking-data')}>
-        <div className='close-preview' onClick={this.props.pageBuilderActions.toggleEditing}>Close preview</div>
-        <TopMenu {...this.props} />
-        <div className='admin-holder'>
+        <div id="wrapper" className={cx('blurr', this.props.blurred && 'blurred', !this.props.editing && 'previewing', this.props.linkingData && 'pb-linking-data')}>
+
           {this.props.activePanelType !== 'pageBuild' && <MenuBar user={this.props.user} activePanelType={this.props.activePanelType} breadcrumbs={this.props.breadcrumbs} />}
-          <div className='admin-content'>
-            {this.props.children}
+
+          <div id="page-wrapper" className="gray-bg dashbard-1">
+            <div className="wrapper wrapper-content animated fadeIn">
+              <div className="p-w-md m-t-sm">
+                <div className="row">
+                  <div className="col-lg-12">
+                    <div className="ibox">
+                      {this.props.loading ? <Loading /> : this.props.children}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     );
   }
 }

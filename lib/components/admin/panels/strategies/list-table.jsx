@@ -16,18 +16,16 @@ export default class ListTable extends Component {
 
     render() {
         return (
-            <div className="table-responsive">
-                <table className="table table-bordered">
-                    <thead>
-                    <tr>
-                        {this.props.showFields.map(this.renderTh, this)}
-                    </tr>
-                    </thead>
-                    <tbody>
-                        {this.props.strategies.map(this.renderEntry, this)}
-                    </tbody>
-                </table>
-            </div>
+            <table className="table table-striped table-bordered table-hover dataTables-example dataTable">
+                <thead>
+                <tr>
+                    {this.props.showFields.map(this.renderTh, this)}
+                </tr>
+                </thead>
+                <tbody>
+                    {this.props.strategies.map(this.renderEntry, this)}
+                </tbody>
+            </table>
 
         );
     }

@@ -39,22 +39,22 @@ export default class StrategiesContainer extends Component {
       { key: 'date', name: '日期', type: 'text' },
     ],
     searchFields: [{
-      key: 'name',
-      name: 'name',
-      label: '姓名',
+      key: 'email',
+      name: 'email',
+      label: '邮箱',
       type: 'text',
       value: ''
     }, {
-      key: 'statue',
-      name: 'statue',
+      key: 'name',
+      name: 'name',
       options: [
-        { name: 'mahui', value: '马慧' },
-        { name: 'mahui1', value: '马慧1' },
-        { name: 'mahui2', value: '马慧2' },
-        { name: 'mahui3', value: '马慧3' },
-        { name: 'mahui4', value: '马慧4' },
+        { value: '0', name: '马慧' },
+        { value: '1', name: '马慧1' },
+        { value: '2', name: '马慧2', selected: 'selected' },
+        { value: '3', name: '马慧3' },
+        { value: '4', name: '马慧4' },
       ],
-      label: '状态',
+      label: '姓名',
       type: 'select'
     }]
   }
