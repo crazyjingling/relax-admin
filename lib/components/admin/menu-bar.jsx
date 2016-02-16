@@ -31,6 +31,11 @@ export default class MenuBar extends Component {
         label: 'General Settings'
       },
       {
+        type: 'strategies',
+        link: '/admin/strategies',
+        label: 'Strategies'
+      },
+      {
         type: 'pages',
         link: '/admin/pages',
         label: 'Pages'

@@ -41,7 +41,7 @@ export default class Admin extends Component {
         <div className='admin-holder'>
           {this.props.activePanelType !== 'pageBuild' && <MenuBar user={this.props.user} activePanelType={this.props.activePanelType} breadcrumbs={this.props.breadcrumbs} />}
           <div className='admin-content'>
-            {this.props.loading ? <Loading /> : this.props.children}
+            {this.props.children}
           </div>
         </div>
       </div>

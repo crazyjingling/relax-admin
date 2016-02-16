@@ -201,6 +201,14 @@ export default class AdminContainer extends Component {
           panelFragments[activePanelType] && delete panelFragments[activePanelType];
         }
         break;
+      case 'strategyEdit':
+        vars.strategy = {
+          strategyname: {
+            value: props.params && props.params.strategyname,
+            type: 'String!'
+          }
+        };
+        break;
       case 'userEdit':
         vars.user = {
           username: {
